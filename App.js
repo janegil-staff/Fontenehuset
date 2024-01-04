@@ -7,16 +7,40 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ContactScreen from "./src/screens/ContactScreen";
 import MenuScreen from "./src/screens/MenuScreen";
 import AdminScreen from "./src/screens/AdminScreen";
-
+import { Octicons, FontAwesome, MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Contact" component={ContactScreen} />
-      <Tab.Screen name="Menu" component={MenuScreen} />
-      <Tab.Screen name="Admin" component={AdminScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarLabel: "Hjem",
+          tabBarIcon: ({ color, size }) => (
+            <Octicons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen name="Contact" component={ContactScreen}   options={{
+          tabBarLabel: "kontakt",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="envelope-o" size={size} color={color} />
+          ),
+        }} />
+      <Tab.Screen name="Menu" component={MenuScreen}   options={{
+          tabBarLabel: "Meny",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="silverware-fork-knife" size={size} color={color} />
+          ),
+        }} />
+      <Tab.Screen name="Admin" component={AdminScreen}   options={{
+          tabBarLabel: "Admin",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="person-outline" size={size} color={color}/>
+          ),
+        }} />
     </Tab.Navigator>
   );
 };
@@ -24,11 +48,10 @@ const TabNavigator = () => {
 export default function App() {
   return (
     <>
-    <StatusBar style="dark" />
+      <StatusBar style="auto" />
       <NavigationContainer>
         <TabNavigator />
       </NavigationContainer>
-      
     </>
   );
 }
