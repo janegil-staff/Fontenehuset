@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import colors from "../constants/colors";
+import CarouselCards from "../components/CarouselCards";
 
 const HomeScreen = () => {
   return (
@@ -16,12 +17,15 @@ const HomeScreen = () => {
           <Text>Hva skjer</Text>
         </TouchableOpacity>
       </View>
+     
       <View style={styles.imageContainer}>
         <Image
           style={styles.mainImage}
           source={require("../../assets/images/fontenehuset.png")}
         />
       </View>
+      <Text style={styles.about}>Om huset</Text>
+      <CarouselCards />
     </View>
   );
 };
@@ -38,6 +42,13 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderWidth: 1,
     marginVertical: 30,
+  },
+  about : {
+    fontStyle: 'italic',
+    textAlign: 'center',
+    marginVertical:20,
+     color: 'black',
+     fontSize: 20
   },
   imageContainer: {
     justifyContent: "center",

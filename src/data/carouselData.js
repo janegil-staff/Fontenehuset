@@ -1,31 +1,24 @@
-export const homeData = [
-    {
-      id: "001",
-      img: require("./assets/Fontenehuset2.jpg"),
-      title: "Om huset",
-      carouselle: [
-        {
-          id: "002",
-          image: require("../../images/assets/arbeidsenheter.jpg"),
-          text: "Enheter",
-        },
-  
-        {
-          id: "003",
-          image: require("../../images/assets/møte.jpg"),
-          text: "Møter",
-        },
-        {
-          id: "004",
-          image: require("../../images/assets/fritid.jpg"),
-          text: "Fritid",
-        },
-  
-        {
-          id: "005",
-          image: require("../../images/assets/cafe.jpg"),
-          text: "cafe koppen",
-        },
-      ],
-    },
-  ];
+const data = [
+  {
+    title: "Enheter",
+    body: "Se mer",
+    imgUrl: require("../../assets/images/fritid.jpg")
+  },
+  {
+    title: "Enheter",
+    body: "Se mer",
+    imgUrl: require("../../assets/images/cafe.jpg")
+  },
+  {
+    title: "Enheter",
+    body: "Se mer",
+    iimgUrl: require("../../assets/images/møte.jpg")
+  },
+  {
+    title: "Enheter",
+    body: "Se mer",
+    iimgUrl: require("../../assets/images/arbeidsenheter.jpg")
+  },
+];
+
+export default data;
