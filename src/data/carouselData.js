@@ -12,12 +12,12 @@ const data = [
   {
     title: "Enheter",
     body: "Se mer",
-    iimgUrl: require("../../assets/images/møte.jpg")
+    imgUrl: require("../../assets/images/møte.jpg")
   },
   {
     title: "Enheter",
     body: "Se mer",
-    iimgUrl: require("../../assets/images/arbeidsenheter.jpg")
+    imgUrl: require("../../assets/images/arbeidsenheter.jpg")
   },
 ];
 
